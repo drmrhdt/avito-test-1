@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0;
+
+  &__logo {
+    width: 200px;
+  }
+
+  &__back_btn {
+    margin-left: 30px;
+
+    font-size: 28px;
+    color: $link-color;
+    text-decoration: none;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import List from "./components/List";
+import Header from "./components/Header";
 import { BrowserRouter, Route } from "react-router-dom";
 import { getItems, getItem } from "./utilities/fetch";
 import styles from "./App.module.scss";
@@ -21,10 +22,13 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className={styles.App}>
-          <Route path="/">
+          <Route exact path="/">
+            <Header />
             <List items={items} />
           </Route>
-          <Route path="/items/:id"></Route>
+          <Route path="/items/:id">
+            <Header />
+          </Route>
         </div>
       </BrowserRouter>
     );

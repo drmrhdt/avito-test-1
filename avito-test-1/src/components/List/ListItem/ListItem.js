@@ -8,8 +8,8 @@ export default class ListItem extends Component {
     item: PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
-      price: PropTypes.number.isRequired,
-      previewItem: PropTypes.string.isRequired,
+      price: PropTypes.string.isRequired,
+      previewImage: PropTypes.string.isRequired,
       address: PropTypes.string.isRequired
     })
   };
@@ -24,6 +24,7 @@ export default class ListItem extends Component {
             className={styles.item__image}
             src={previewImage}
             title={title}
+            alt={title}
           />
         </Link>
         <div className={styles.item__text}>

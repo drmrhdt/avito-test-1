@@ -9,11 +9,15 @@ export default class List extends Component {
       PropTypes.shape({
         id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
-        price: PropTypes.number.isRequired,
-        previewItem: PropTypes.string.isRequired,
+        price: PropTypes.string.isRequired,
+        previewImage: PropTypes.string.isRequired,
         address: PropTypes.string.isRequired
       })
-    ).isRequired
+    )
+  };
+
+  static defaultProps = {
+    items: []
   };
 
   render() {
