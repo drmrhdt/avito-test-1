@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import List from "./components/List";
 import Header from "./components/Header";
+import ItemDetails from "./components/ItemDetails";
 import { BrowserRouter, Route } from "react-router-dom";
-import { getItems, getItem } from "./utilities/fetch";
+import { getItems } from "./utilities/fetch";
 import styles from "./App.module.scss";
 
 class App extends Component {
@@ -13,22 +14,17 @@ class App extends Component {
   async componentDidMount() {
     const items = await getItems();
     this.setState({ items: items });
-    const item = await getItem(1837300862);
-    console.log(item);
   }
 
   render() {
     const { items } = this.state;
+
     return (
       <BrowserRouter>
         <div className={styles.App}>
-          <Route exact path="/">
-            <Header />
-            <List items={items} />
-          </Route>
-          <Route path="/items/:id">
-            <Header />
-          </Route>
+          <Header />
+          <Route exact path="/" render={() => <List items={items} />} />
+          <Route path="/items/:id" component={ItemDetails} />
         </div>
       </BrowserRouter>
     );

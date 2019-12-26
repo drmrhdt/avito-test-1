@@ -1,0 +1,10 @@
+.details {
+  display: flex;
+
+  text-align: left;
+
+  &__slider,
+  &__text {
+    width: 50%;
+  }
+}
