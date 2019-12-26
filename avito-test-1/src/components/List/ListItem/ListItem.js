@@ -20,7 +20,11 @@ export default class ListItem extends Component {
     return (
       <div className={styles.item}>
         <Link to={`/items/${id}`}>
-          <img className={styles.item__image} src={previewImage} />
+          <img
+            className={styles.item__image}
+            src={previewImage}
+            title={title}
+          />
         </Link>
         <div className={styles.item__text}>
           <Link to={`/items/${id}`} className={styles.item__title}>

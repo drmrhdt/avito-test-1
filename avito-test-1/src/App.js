@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import List from "./components/List";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import { getItems, getItem } from "./utilities/fetch";
 import styles from "./App.module.scss";
 

@@ -1,7 +1,9 @@
+@import "../../../variables.scss";
+
 .item {
   margin: 0 10px 20px 0;
 
-  box-shadow: 0 0 3px 1px #dddddd;
+  box-shadow: 0 0 3px 1px $shadow-color;
 
   &__image {
     max-width: 100%;
@@ -18,8 +20,12 @@
 
   &__title {
     font-size: 20px;
-    color: #009cf0;
+    color: $link-color;
     text-decoration: none;
+
+    &:hover {
+      color: $link-hover;
+    }
   }
 
   &__price {
@@ -27,7 +33,7 @@
   }
 
   &__address {
-    color: #8f8f8f;
+    color: $light-text;
   }
 }
 
