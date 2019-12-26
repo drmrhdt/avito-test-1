@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import List from "./components/List";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { getItems, getItem } from "./utilities/fetch";
 import styles from "./App.module.scss";
 
@@ -18,9 +19,14 @@ class App extends Component {
   render() {
     const { items } = this.state;
     return (
-      <div className={styles.App}>
-        <List items={items} />
-      </div>
+      <BrowserRouter>
+        <div className={styles.App}>
+          <Route path="/">
+            <List items={items} />
+          </Route>
+          <Route path="/items/:id"></Route>
+        </div>
+      </BrowserRouter>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import styles from "./ListItem.module.scss";
 
 export default class ListItem extends Component {
@@ -18,9 +19,13 @@ export default class ListItem extends Component {
 
     return (
       <div className={styles.item}>
-        <img className={styles.item__image} src={previewImage} />
+        <Link to={`/items/${id}`}>
+          <img className={styles.item__image} src={previewImage} />
+        </Link>
         <div className={styles.item__text}>
-          <p className={styles.item__title}>{title}</p>
+          <Link to={`/items/${id}`} className={styles.item__title}>
+            {title}
+          </Link>
           <p className={styles.item__price}>{price}</p>
           <p className={styles.item__address}>{address}</p>
         </div>
