@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import List from "./components/List";
 import { getItems, getItem } from "./utilities/fetch";
-import "./App.css";
+import styles from "./App.module.scss";
 
 class App extends Component {
   state = {
@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     const { items } = this.state;
     return (
-      <div className="App">
+      <div className={styles.App}>
         <List items={items} />
       </div>
     );
