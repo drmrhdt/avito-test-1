@@ -1,0 +1,41 @@
+@import "../../../variables.scss";
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: $light-text;
+
+  &__btn {
+    width: 60px;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $btn-hover;
+    }
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+
+  list-style: none;
+
+  &__item {
+    width: 150px;
+    height: 100px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import GallerySlider from "./GallerySlider";
 import { getItem } from "../../utilities/fetch";
 import styles from "./ItemDetails.module.scss";
 
@@ -41,9 +42,11 @@ export default class ItemDetails extends Component {
 
     return (
       <div className={styles.details}>
-        <div className={styles.details__slider} images={images}>
-          Gallery and slider
-        </div>
+        <GallerySlider
+          className={styles.details__slider}
+          images={images}
+          title={title}
+        />
         <div className={styles.details__text}>
           <p>{title}</p>
           <p>{price}</p>
