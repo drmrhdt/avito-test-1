@@ -26,7 +26,7 @@ class App extends Component {
         <div className={styles.App}>
           <Header />
           {isLoading ? (
-            "...is loading"
+            "...Загрузка"
           ) : (
             <>
               <Route exact path="/" render={() => <List items={items} />} />
