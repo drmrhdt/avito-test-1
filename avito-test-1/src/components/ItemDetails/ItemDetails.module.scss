@@ -1,11 +1,40 @@
+@import "../../variables.scss";
+
 .details {
-  display: flex;
-  justify-content: space-between;
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
 
-  text-align: left;
+    text-align: left;
+  }
 
-  &__slider,
+  &_btn_back {
+    font-size: 22px;
+    color: $link-color;
+    text-decoration: none;
+  }
+
+  &__slider {
+    flex-grow: 3;
+    width: 70%;
+  }
+
   &__text {
-    width: 50%;
+    flex-grow: 1;
+    width: 30%;
+  }
+
+  &__text {
+    margin-left: 30px;
+  }
+
+  &__seller_name {
+    font-size: 20px;
+    color: $link-color;
+    text-decoration: none;
+
+    cursor: pointer;
   }
 }
