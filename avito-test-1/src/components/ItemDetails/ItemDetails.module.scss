@@ -11,6 +11,9 @@
   }
 
   &_btn_back {
+    margin: 0;
+    padding: 0;
+
     font-size: 22px;
     color: $link-color;
     text-decoration: none;
@@ -24,10 +27,11 @@
   &__text {
     flex-grow: 1;
     width: 30%;
+    margin-left: 30px;
   }
 
-  &__text {
-    margin-left: 30px;
+  &__title {
+    margin-top: 0;
   }
 
   &__seller_name {
@@ -36,5 +40,77 @@
     text-decoration: none;
 
     cursor: pointer;
+  }
+}
+
+.skeleton {
+  color: transparent;
+
+  &__details {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &__slider {
+    height: 500px;
+    margin-bottom: 15px;
+
+    background-color: $shadow-color;
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+
+    &_item {
+      width: 24%;
+
+      background-color: $shadow-color;
+    }
+  }
+
+  &__slider_gallery {
+    width: 44%;
+    height: 500px;
+  }
+
+  &__text {
+    width: 30%;
+    margin-left: 30px;
+  }
+
+  &__text_xs {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+
+    font-size: 22px;
+
+    background-color: $shadow-color;
+  }
+
+  &__button {
+    width: 200px;
+
+    font-size: 22px;
+
+    background-color: $shadow-color;
+  }
+
+  &__text_sm {
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+
+    background-color: $shadow-color;
+  }
+
+  &__text_m {
+    width: 400px;
+    height: 40px;
+    margin-bottom: 10px;
+
+    background-color: $shadow-color;
   }
 }

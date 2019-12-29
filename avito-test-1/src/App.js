@@ -8,23 +8,31 @@ import styles from "./App.module.scss";
 
 class App extends Component {
   state = {
-    items: []
+    items: [],
+    isLoading: false
   };
 
   async componentDidMount() {
+    this.setState({ isLoading: true });
     const items = await getItems();
-    this.setState({ items: items });
+    this.setState({ isLoading: false, items: items });
   }
 
   render() {
-    const { items } = this.state;
+    const { items, isLoading } = this.state;
 
     return (
       <BrowserRouter>
         <div className={styles.App}>
           <Header />
-          <Route exact path="/" render={() => <List items={items} />} />
-          <Route path="/items/:id" component={ItemDetails} />
+          {isLoading ? (
+            "...is loading"
+          ) : (
+            <>
+              <Route exact path="/" render={() => <List items={items} />} />
+              <Route path="/items/:id" component={ItemDetails} />
+            </>
+          )}
         </div>
       </BrowserRouter>
     );

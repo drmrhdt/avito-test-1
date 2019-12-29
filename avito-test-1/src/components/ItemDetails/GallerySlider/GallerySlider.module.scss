@@ -80,9 +80,6 @@
   .slider {
     &__image {
       width: 350px;
-      height: 500px;
-
-      object-fit: contain;
     }
   }
 }
@@ -91,22 +88,14 @@
   .slider {
     &__image {
       width: 400px;
-      height: 500px;
-
-      object-fit: contain;
     }
   }
 }
 
 @media (min-width: 768px) {
   .slider {
-    width: 100%;
-
     &__image {
       width: 500px;
-      height: 500px;
-
-      object-fit: contain;
     }
   }
 }
